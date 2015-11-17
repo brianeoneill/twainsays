@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/remodal-default-theme.css" />
+  <link rel="stylesheet" href="css/remodal.css" />
+  <title>Twain Says</title>
+</head>
+<body>
+<div id="wrap">
+
+  
+  <a data-remodal-target="helpscreen" id="show-help">Help</a>
+  <a data-remodal-target="confirm-new" id="newgame">New Game</a>
+
+  <div id="helpscreen" class="remodal-bg">
+    <div class="remodal" data-remodal-id="helpscreen" id="helpscreen">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>How to Play Twain Says</h1>
+      <p>Rearrange the tiles to reveal a Mark Twain quotation, reading from left to right, top to bottom. You can rearrange the tiles by sliding them vertically, but not horizontally.</p>
+      <p>There are empty cells at the top of the gameboard. You can use them to temporarily hold tiles while you rearrange other tiles on the game board.</p>
+      <p>Any empty cell that is not darkened can hold a tile. Darkened cells are the spaces between words.</p>
+      <h2>Tips</h2>
+      <p>The end of a row is not necessarily the end of a word. Words often&mdash;but not always&mdash;wrap from one row to the next.</p>
+      <p>There are no tiles for punctuation, like commas and apostrophes. You would spell "can't," for example, like this:</p>
+      <div id="help-example">
+        <div class="tile">C</div>
+        <div class="tile">A</div>
+        <div class="tile">N</div>
+        <div class="tile">T</div>
+      </div><!-- help-example -->
+    </div>
+  </div>
+
+  <div class="remodal-bg">
+    <div class="remodal" data-remodal-id="confirm-new" id="confirm-new">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>New Game</h1>
+      <p>Leave this game and start a new one?</p>
+      <br>
+      <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+      <button data-remodal-action="confirm" class="remodal-confirm game-init">New Game</button>
+    </div>
+  </div>
+
+  <div id="play">
+    <img id="twain" src="img/logo.png" alt="">
+    <img id="logo-tiles" src="img/logo-tiles.png" alt="">
+    <div id="init" class="button game-init">Play</div>
+  </div>
+
+
+  <div class="remodal-bg">
+    <div class="remodal" data-remodal-id='winscreen' id="winscreen">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>You Win!</h1>
+      <p id="quote"></p>
+      <button data-remodal-action="confirm" class="remodal-confirm button game-init" id="again">Play Again?</button>
+    </div>
+  </div>
+  
+  <div id="canvas"></div>
+
+</div>
+<script src="js/jquery_1.7.2.js"></script>
+<script src="js/jquery_ui_1.8.18.js"></script>
+<script src="js/shuffle.js"></script>
+<script src="js/remodal.js"></script>
+<script src="js/jquery_ui_touch_punch_0.2.2.js"></script>
+<script src="js/game-script.js"></script>
+</body>
+</html>
