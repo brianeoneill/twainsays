@@ -1,0 +1,271 @@
+/*
+===================================================================
+  RESET
+===================================================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+* {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+
+/*
+===================================================================
+  LAYOUT & TYPOGRAPHY
+===================================================================
+*/
+
+body { 
+  font-family: Arial, sans-serif;
+  font-size: 100%;
+  background-color: #93D3BB;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+#wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.button {
+  width: 100px;
+  text-align: center;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1.1em 0;
+  width: 200px;
+  margin: auto;
+  background-color: #3498db;
+  cursor: pointer;
+}
+
+#show-help,
+#newgame {
+  color: #3B4A44;
+  text-decoration: none;
+  padding: 12px 16px;
+  border: 1px solid #66B396;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+#show-help {
+  margin-right: 24px;
+}
+
+#newgame {
+  margin-right: 12px;
+}
+
+
+/*
+===================================================================
+  CANVAS AND TILES
+===================================================================
+*/
+
+#canvas { 
+  overflow: hidden;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column { 
+  padding: 0 2px; 
+  float: left; 
+}
+
+.tile_holder { 
+  width: 54px;
+  height: 54px;
+  padding: 4px 0 0 4px;
+  margin-bottom: 30px;
+  background-color: #66B396;
+  border-radius: 4px;
+}
+
+.tile_holder:first-child {
+  margin-bottom: 55px;
+}
+
+.tile_holder:last-child {
+  margin-bottom: 0;
+}
+
+.tile { 
+  height: 46px; 
+  width: 46px; 
+  background-color: #E8E7E1;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 48px;
+  text-transform: uppercase;
+  font-size: 34px;
+  color: #261c10;
+}
+
+.tile:hover {
+  cursor: pointer;
+}
+
+.blank { 
+  visibility: hidden;
+}
+
+.dark { 
+  background-color: #3B4A44;
+}
+
+.tile.ui-draggable-dragging {
+  box-shadow: 0 0 40px #000;
+}
+
+
+/*
+===================================================================
+  START SCREEN
+===================================================================
+*/
+
+#play {
+  margin: 100px auto;
+  width: 450px;
+  padding: 60px;
+  background-color: #fff;
+  box-shadow: 0 0 50px rgba(80,80,80,.6);
+  text-align: center;
+}
+
+#logo-tiles {
+  margin: 3em 0;
+}
+
+
+/*
+===================================================================
+  WIN SCREEN
+===================================================================
+*/
+
+
+#winscreen h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+#quote {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 2.5em 0;
+}
+
+
+
+/*
+===================================================================
+  HELP SCREEN
+===================================================================
+*/
+
+
+#help-example {
+  overflow: hidden;
+}
+
+#help-example .tile {
+  float: left;
+  margin-right: 10px;
+}
+
+#helpscreen h1 {
+  font-weight: bold;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+#helpscreen h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin: .75em 0 .5em;
+}
+
+#helpscreen p {
+  text-align: left;
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
+
+
+/*
+===================================================================
+  "CONFIRM NEW" MODALS
+===================================================================
+*/
+
+#confirm-new h1 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+#confirm-new p {
+  font-size: 1em;
+  margin-bottom: 1.5em;
+}
+
+#confirm-new .remodal-confirm,
+#winscreen .remodal-confirm {
+  background-color: #3498db;
+}
